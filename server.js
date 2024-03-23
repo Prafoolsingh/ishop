@@ -88,6 +88,14 @@ app.use("/api/v1", orderRouter);
 // Using payment router for routes starting with "/api/v1"
 app.use("/api/v1", paymentRouter);
 
+// using the frontend app
+app.use(express.static(path.join(__dirname, "build")))
+
+// rendering index.html of build app for every path
+app.get("*", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "./frontend/build/index.html"));
+});
+
 
 // Using error handling middleware
 app.use(error_middleware);
