@@ -1,0 +1,19 @@
+.Cart-Component-Left-Above {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f0f8ff;
+    border-radius: 5px;
+}
+
+
+
+.checkoutBtn:hover{
+    background-color: #ffffff;
+    color: black;
+    border: black 1px solid;
+    box-shadow: 2px 2px black;
+    
+
+}
+

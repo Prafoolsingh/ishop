@@ -1,0 +1,22 @@
+.profile-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+  }
+  
+  .profile-image img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .btn-primary {
+    margin-top: 10px;
+  }
+  
+  .profile-buttons .btn {
+    margin-top: 10px;
+  }
+  
