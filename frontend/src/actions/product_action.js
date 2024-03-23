@@ -90,7 +90,7 @@ export const getProductDetails = (_id) =>
       dispatch({ type: PRODUCT_DETAILS_REQUEST });
 
       // Making a GET request to retrieve product details
-      const { data } = await axios.get(`http://localhost:4000/api/v1/product/${_id}`);
+      const { data } = await axios.get(`/api/v1/product/${_id}`);
 
       // Dispatching action with the retrieved product details
       dispatch({

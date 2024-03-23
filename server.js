@@ -88,12 +88,19 @@ app.use("/api/v1", orderRouter);
 // Using payment router for routes starting with "/api/v1"
 app.use("/api/v1", paymentRouter);
 
+
+
+// code for production mode
 if(process.env.NODE_ENV==="PRODUCTION"){
+
     app.use(express.static(path.join(__dirname,"/frontend/build")))
 
     // rendering index.html of build app for every path
+
 app.get("*", (req, res) => {
+
     res.sendFile(path.resolve(__dirname,"frontend","build", "index.html"));
+    
   });
 }
 
