@@ -39,7 +39,7 @@ import NotFound from './components/layout/Not Found/NotFound';
 import Contact from './components/layout/Contact/Contact';
 import ScrollToTop from './components/ScrollToTop';
 import UpdateProduct from './components/Admin/UpdateProduct';
-import Cookies  from "js-cookie";
+
 function App() {
 
   const dispatch = useDispatch();

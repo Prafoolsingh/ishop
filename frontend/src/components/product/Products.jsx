@@ -14,12 +14,10 @@ import RatingStars from 'react-rating-stars-component';
 import MetaData from "../layout/metaData/MetaData.jsx"
 
 const categories = [
-  "cloths",
-  "Electronics",
-  "Footwear",
-  "Bottom",
-  "Tops"
-  
+  "Mens",
+  "Womens",
+  "Kids",
+  "Electronics"
 ];
 
 function Products() {
