@@ -43,7 +43,6 @@ function Products() {
   const totalNumberOfPages = Math.ceil(productCount / resultPerPage);
 
   const categoryHandler = (e) => {
-
     setCategory(e.target.value);
   };
 
@@ -66,19 +65,14 @@ function Products() {
 
   return (
     <>
-      {loading ? (
-        <Loader />
-      ) : (
-
-        <>
-
-          <MetaData title="Ishop Products" />
-          <div className="container mt-5">
-
+      <MetaData title="Ishop Products" />
+      <div className="container mt-5">
+        {loading ? (
+          <Loader />
+        ) : (
+          <>
             <div className="row">
-
               <div className="col-md-3">
-
                 {/* category filter */}
                 <aside className="category-filter px-3 border pt-5 pb-4 mt-3 shadow-sm">
                   <Typography variant="h6" gutterBottom className="text-center ">Categories</Typography>
@@ -89,8 +83,6 @@ function Products() {
                     ))}
                   </select>
                 </aside>
-
-
                 {/* ratings filter */}
                 <aside className="category-filter mt-5 px-3 border p-1 shadow-sm">
                   <Typography component="legend" className="text-center">Ratings Above</Typography>
@@ -105,7 +97,6 @@ function Products() {
                     />
                   </div>
                 </aside>
-
                 {/* price filter */}
                 <aside className="price-filter mt-5 px-3 border p-1 shadow-sm">
                   <Typography variant="h6" gutterBottom className="text-center">Filter by Price</Typography>
@@ -118,38 +109,41 @@ function Products() {
                     max={10000}
                   />
                 </aside>
-
               </div>
-
-
               {/* Products rendering */}
-              {products && products.map(product => (
-                <div key={product._id} className="col-lg-3 col-md-4 col-sm-6 col-12 my-3 mx-auto text-center">
-                  <ProductCard product={product} />
+              <div className="col-md-9">
+                <div className="row">
+                  {products.length === 0 ? (
+                    <div className="col-md-12 text-center">
+                      <h2>No products found</h2>
+                    </div>
+                  ) : (
+                    products.map(product => (
+                      <div key={product._id} className="col-lg-3 col-md-4 col-sm-6 col-12 my-3 mx-auto text-center">
+                        <ProductCard product={product} />
+                      </div>
+                    ))
+                  )}
                 </div>
-              ))}
-
-            </div>
-
-            {/* Pagination */}
-            <div className="d-flex justify-content-center my-5">
-              <Stack spacing={2}>
-                {totalNumberOfPages > 1 && (
-                  <Pagination
-                    count={totalNumberOfPages}
-                    page={currentPage}
-                    onChange={setCurrentPageNo}
-                    variant="outlined"
-                    shape="rounded"
-                  />
+                {/* Pagination */}
+                {products.length > 0 && (
+                  <div className="d-flex justify-content-center my-5">
+                    <Stack spacing={2}>
+                      <Pagination
+                        count={totalNumberOfPages}
+                        page={currentPage}
+                        onChange={setCurrentPageNo}
+                        variant="outlined"
+                        shape="rounded"
+                      />
+                    </Stack>
+                  </div>
                 )}
-              </Stack>
+              </div>
             </div>
-
-          </div>
-        </>
-
-      )}
+          </>
+        )}
+      </div>
     </>
   );
 }

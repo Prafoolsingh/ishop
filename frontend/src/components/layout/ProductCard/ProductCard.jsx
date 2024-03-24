@@ -4,8 +4,10 @@ import { ShoppingCart } from '@mui/icons-material';
 import "./ProductCard.css";
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import { addItemsToCart } from '../../../actions/cart_action'; // Assuming this is the correct path to your action
+import { addItemsToCart } from '../../../actions/cart_action'; 
 import { toast } from 'react-toastify';
+
+
 const ProductCard = ({ product }) => {
   const options = {
     edit: false,
