@@ -114,8 +114,8 @@ function Products() {
               <div className="col-md-9">
                 <div className="row">
                   {products.length === 0 ? (
-                    <div className="col-md-12 text-center">
-                      <h2>No products found</h2>
+                    <div className="col-md-12 vh-100  text-center d-flex justify-content-center align-items-center ">
+                      <h2 className='mt-5'>No products found</h2>
                     </div>
                   ) : (
                     products.map(product => (
