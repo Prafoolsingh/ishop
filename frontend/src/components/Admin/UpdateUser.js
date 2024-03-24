@@ -62,7 +62,7 @@ const UpdateUser = () => {
       {loading ? (
         <Loader />
       ) : (
-        <div className="container my-5 vh-100">
+        <div className="container my-5 min-vh-100">
           <div className="row">
             <div className="col-lg-6 mx-auto p-5">
               <form className="update-user-form shadow p-4" onSubmit={updateUserSubmitHandler}>

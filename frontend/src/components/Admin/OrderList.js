@@ -59,7 +59,7 @@ const OrderList = () => {
       {loading ? (
         <Loader />
       ) : (
-        <div className="container my-5 vh-100">
+        <div className="container my-5 min-vh-100">
 
           <h1 className="text-center my-5 fw-bold" style={{ color: '#007bff', textShadow: '2px 2px 4px rgba(0,0,0,0.3)' }}>All Orders</h1>
    

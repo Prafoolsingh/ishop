@@ -62,7 +62,7 @@ const ProductList = () => {
         <>
           <MetaData title={`All Products - Admin`} />
 
-          <div className="container mt-3 text-center vh-100">
+          <div className="container mt-3 text-center min-vh-100">
             <div className="row">
               <h1 className="my-5 text-center fw-bold" style={{ color: '#007bff', textShadow: '2px 2px 4px rgba(0,0,0,0.3)' }}>ALL PRODUCTS</h1>
               <div className="col-md-12">
